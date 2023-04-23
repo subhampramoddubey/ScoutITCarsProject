@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    >
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_margin="21dp">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dashboard"
+        android:textSize="32dp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:layout_gravity="center"
+         />
+
+    <Button
+        android:id="@+id/logout_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Logout"
+        android:textColor="@color/black"
+        android:backgroundTint="#CF2222"
+        android:layout_gravity="center"
+        android:layout_marginLeft="92dp"
+        />
+
+</LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add a new Car"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:layout_marginLeft="21dp"
+        android:textSize="16dp"
+        />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="21dp"
+        android:layout_marginVertical="11dp"
+        android:hint="Select Make"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+        >
+<AutoCompleteTextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/filled_expossed1"
+    android:inputType="none">
+
+</AutoCompleteTextView>
+
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="21dp"
+        android:hint="Select Model"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+        >
+        <AutoCompleteTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/filled_expossed2"
+            android:inputType="none">
+
+        </AutoCompleteTextView>
+
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="11dp"
+        >
+    <Button
+        android:id="@+id/refreshButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Refresh"
+        android:textColor="@color/black"
+        android:backgroundTint="#2B6AE8"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+
+        />
+
+    <Button
+        android:id="@+id/addButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Car"
+        android:layout_weight="1"
+        android:textColor="@color/black"
+        android:backgroundTint="#D9FF00"
+        android:layout_gravity="center"
+        android:layout_marginLeft="112dp"
+
+        />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Your Car"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:layout_marginLeft="21dp"
+        android:textSize="16dp"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>
